@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lieferino</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquerry.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="header">
+        <div class="siteName">
+            <img class="img-header" src="img/restaurant-3-64.png">
+            <span class="website">Lieferino.de</span>
+        </div>
+        <div>
+            <span class="adress">Mainstraße 24, Frankfurt am Main</span>
+        </div>
+        <div>
+            <img class="translate" src="img/flag.png">
+        </div>
+    </div>
+
+    <div>
+        <img class="headimg" src="img/schnitzel-3279045_1280.jpg">
+    </div>
+    <div>
+        <img class="logo" src="img/LogoMakr-6sNdcz.png">
+    </div>
+
+    <div class="main-container">
+        <div class="menu-name-container">
+            <div class="restaurant-name distance">
+                <div>
+                    <h1>Zum Krüstchen</h1>
+                    <img class="rating" src="img/rating.png">
+                </div>
+                <div class="infoandlike">
+                    <img class="info" src="img/information-variant.png">
+                    <img onclick="like()" type="button" class="like" id="heart" src="img/heart-outline.png">
+                </div>
+            </div>
+            <div class="opener distance">
+                <span><b>In diesem Restaurant finden Sie sämtliche Speisen der deutschen Küche.<br>Überzeugen
+                        Sie sich
+                        selbst!</b></span>
+            </div>
+
+            <div class="swipe">
+                <a href="#cold-kitchen">Kalte Küche</a>
+                <a href="#salad">Salate</a>
+                <a href="#grill">Vom Grill</a>
+                <a href="#pan">Aus der Pfanne</a>
+                <a href="#frankfurt-kitchen">Frankfurter Küche</a>
+                <a href="#dessert">Dessert</a>
+                <a href="#drinks">Getränke</a>
+            </div>
+            <div class="menucards">
+                <img class="img-category" src="img/open-sandwich-1331447_1280.jpg">
+                <div class="category">
+                    <span id="cold-kitchen">Kalte Küche</span>
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Handkäs mit Musik</span>
+                    <div class="meal-description-info">und Roggenbrot</div>
+                    <div id="price">3,80 €</div>
+                </div>
+                <div onclick="addToBasket('Handkäs mit Musik', 3.80)" class="add-to-basket">+
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Frankfurter Schneegestöber</span>
+                    <div class="meal-description-info">und Bauernbrot</div>
+                    <div id="price">6,90 €</div>
+                </div>
+                <div onclick="addToBasket('Frankfurter Schneeegestöber', 6.90)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Frankfurter Tapas</span>
+                    <div class="meal-description-info">Handkäsetatar, Frankfurter Schneegestöber,
+                        Rindfleischsalat mit gehacktem Ei und Roggenbrot</div>
+                    <div id="price">9,50 €</div>
+                </div>
+                <div onclick="addToBasket('Frankfurter Tapas', 9.50)" class="add-to-basket">+
+                </div>
+            </div>
+            <div class="menucards">
+                <img class="img-category" src="img/plant-fruit-dish-meal-food-salad-722087-pxhere.com.jpg">
+                <div class="category">
+                    <span id="salad">Salate</span>
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Gemischter Salat</span>
+                    <div class="meal-description-info">mit gerösteten Sonnenblumenkernen</div>
+                    <div id="price">7,50 €</div>
+                </div>
+                <div onclick="addToBasket('Gemischter Salat', 7.50)" class="add-to-basket">+
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Salatteller</span>
+                    <div class="meal-description-info">mit Karotte, Gurke, Tomate, gekochtem Ei, Schinken und Käse
+                    </div>
+                    <div id="price">10,50 €</div>
+                </div>
+                <div onclick="addToBasket('Salatteller', 10.50)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Frühlingssalat</span>
+                    <div class="meal-description-info">bunte Blattsalate mit Rucola, Spargelstückchen, Erdbeeren,
+                        gerösteten Kernen
+                        und Parmesanhobel, 7-Kräuter-Vinaigrette</div>
+                    <div id="price">14,40 €</div>
+                </div>
+                <div onclick="addToBasket('Frühlingssalat', 14.40)" class="add-to-basket">+
+                </div>
+            </div>
+            <div class="menucards">
+                <img class="img-category" src="img/dish-meal-food-meat-barbecue-cuisine-1069657-pxhere.com.jpg">
+                <div class="category">
+                    <span id="grill">Vom Grill</span>
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Rinderleber "Berliner Art"</span>
+                    <div class="meal-description-info">mit Röstzwiebeln, Püree und Beilagensalat</div>
+                    <div id="price">12,80 €</div>
+                </div>
+                <div onclick="addToBasket('Rinderleber Berliner Art', 12.80)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Rumpsteak 250g</span>
+                    <div class="meal-description-info">mit Zwiebeln, Kräuterbutter oder Pfefferrahmsoße und
+                        Bratkartoffeln</div>
+                    <div id="price">19,50 €</div>
+                </div>
+                <div onclick="addToBasket('Rumpsteak 250g', 19.50)" class="add-to-basket">+
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Gegrillter Stich</span>
+                    <div class="meal-description-info">mit Sauerkraut und Kartoffelpüree</div>
+                    <div id="price">13,50 €</div>
+                </div>
+                <div onclick="addToBasket('Gegrillter Scharfskäse', 13.50)" class="add-to-basket">+
+                </div>
+            </div>
+            <div class="menucards">
+                <img class="img-category" src="img/flower-dish-food-cooking-produce-vegetable-20000-pxhere.com.jpg">
+                <div class="category">
+                    <span id="pan">Aus der Pfanne</span>
+                </div>
+            </div>
+
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Paniertes Schnitzel "Wiener Art"</span>
+                    <div class="meal-description-info">mit Bratkartoffeln und Beilagensalat</div>
+                    <div id="price">13,80 €</div>
+                </div>
+                <div onclick="addToBasket('Paniertes Schnitzel Wiener Art', 13.80)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Zwiebelschnitzel</span>
+                    <div class="meal-description-info">mit Bratkartoffeln und Beilagensalat</div>
+                    <div id="price">14,30 €</div>
+                </div>
+                <div onclick="addToBasket('Zwiebelschnitzel', 14.30)" class="add-to-basket">+
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Rinderrouladen nach Großmutters Art</span>
+                    <div class="meal-description-info">mit hausgemachten Spätzle und Apfelrotkraut</div>
+                    <div id="price">17,80 €</div>
+                </div>
+                <div onclick="addToBasket('Rinderrouladen nach Großmutters Art', 17.80)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Gratinierter Kräuterschafskäse</span>
+                    <div class="meal-description-info">mit Grillgemüse, Rosamrinkartoffeln und Grüne Soße-Salsa
+                    </div>
+                    <div id="price">10,80 €</div>
+                </div>
+                <div onclick="addToBasket('Gratinierter Kräuterschafskäse', 10.80)" class="add-to-basket">+</div>
+            </div>
+            <div class="menucards">
+                <img class="img-category" src="img/frankfurts-green-sauce-4163485_1280.jpg">
+                <div class="category">
+                    <span id="frankfurt-kitchen">Frankfurter Küche</span>
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Frankfurter Schnitzel</span>
+                    <div class="meal-description-info">mit original Grüner Soße und Salzkartoffeln</div>
+                    <div id="price">14,80 €</div>
+                </div>
+                <div onclick="addToBasket('Frankfurter Schnitzel', 14.80)" class="add-to-basket">+
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Krüstchenschnitzel</span>
+                    <div class="meal-description-info">auf Knobibrot, Salatgarnitur und kleiner grüner Soße</div>
+                    <div id="price">12,50 €</div>
+                </div>
+                <div onclick="addToBasket('Krüstchenschnitzel', 12.50)" class="add-to-basket">+
+                </div>
+            </div>
+
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Hessischer Rindersauertbraten</span>
+                    <div class="meal-description-info">eingelegt in Apfelwein mit Kartoffelknödeln und Apfelrotkraut
+                    </div>
+                    <div id="price">16,80 €</div>
+                </div>
+                <div onclick="addToBasket('Hessischer Rindersauertbraten', 16.80)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Frankfurter Grüne Soße</span>
+                    <div class="meal-description-info">mit vier halben Bio-Eiern und Salzkartoffeln</div>
+                    <div id="price">11,80 €</div>
+                </div>
+                <div onclick="addToBasket('Frankfurter Grüne Soße', 11.80)" class="add-to-basket">+
+                </div>
+            </div>
+            <div class="menucards">
+                <img class="img-category" src="img/dish-food-produce-dessert-cuisine-cake-911474-pxhere.com.jpg">
+                <div class="category">
+                    <span id="dessert">Dessert</span>
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Erdbeer Tiramisu</span>
+                    <div class="meal-description-info">Erdbeer-Limetten-Mascarponecrème, geschichtet mit marinierten
+                        Löffelbiskuits,
+                        ganiert mit Erdbeeren und Minze
+                    </div>
+                    <div id="price">6,50 €</div>
+                </div>
+                <div onclick="addToBasket('Erdbeer-Tiramisu', 6.50)" class="add-to-basket">+
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Apfelstrudel</span>
+                    <div class="meal-description-info">auf Vanillespiegel, mit einer Kugel Eis</div>
+                    <div id="price">6,20 €</div>
+                </div>
+                <div onclick="addToBasket('Apfelstrudel', 6.20)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Crème Brûlée</span>
+                    <div class="meal-description-info">mit Himbeersorbet, ganiert mit Früchten der Saison</div>
+                    <div id="price">7,80 €</div>
+                </div>
+                <div onclick="addToBasket('Crème Brûlée', 7.80)" class="add-to-basket">+</div>
+            </div>
+            <div class="menucards">
+                <img class="img-category"
+                    src="img/background-beverage-black-background-bubble-caffeine-carbonated-1455475-pxhere.com.jpg">
+                <div class="category distance">
+                    <span id="drinks">Getränke</span>
+                </div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Cola 1,0l</span>
+                    <div class="meal-description-info">
+                    </div>
+                    <div id="price">3,50 €</div>
+                </div>
+                <div onclick="addToBasket('Cola', 3.50)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Fanta 1,0l</span>
+                    <div class="meal-description-info"></div>
+                    <div id="price">3,50 €</div>
+                </div>
+                <div onclick="addToBasket('Fanta', 3.50)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Sprite 1,0l</span>
+                    <div class="meal-description-info"></div>
+                    <div id="price">3,50 €</div>
+                </div>
+                <div onclick="addToBasket('Sprite', 3.50)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Wasser still 1,0l</span>
+                    <div class="meal-description-info"></div>
+                    <div id="price">2,90 €</div>
+                </div>
+                <div onclick="addToBasket('Wasser still', 2.90)" class="add-to-basket">+</div>
+            </div>
+            <div class="menus">
+                <div class="meals">
+                    <span class="meal-name" id="name">Wasser medium 1,0l</span>
+                    <div class="meal-description-info"></div>
+                    <div id="price">2,90 €</div>
+                </div>
+                <div onclick="addToBasket('Wasser medium', 2.90)" class="add-to-basket">+</div>
+            </div>
+        </div>
+        <a href="#" class="to-top d-none" id="toTop">
+            <img src="img/arrow-up-bold-circle.png">
+        </a>
+        <div id="basket-container">
+            <div class="basket basket-scroll d-none-mobile" id="basket">
+                <div class="basket-name">
+                    Warenkorb
+                    <h4 onclick="backToMenus()" id="mobileBack" class="mobileX">X</h4>
+                </div>
+
+                <div class="basket-empty" id="emptyBasket">
+                </div>
+
+                <div class="sum-container" id="mobile-sum-container">
+                    <div class="sum-without-delivery">
+                        <span>Zwischensumme</span>
+                        <span id="subPrice">0,00 €</span>
+
+                    </div>
+                    <div class="delivery-cost">
+                        <span>Lieferkosten</span>
+                        <span id="deliveryCost">3,00 €</span>
+                    </div>
+                    <div class="sum-all">
+                        <span><b>Gesamt</b></span>
+                        <span id="totalPrice"><b>0,00 €</b></span>
+
+                    </div>
+                </div>
+                <div id="min-value-order" class="min-order">
+                    <p>
+                        Leider kannst Du noch nicht bestellen. Zum Krüstchen liefert erst ab einem
+                        Mindesbestellwert von 25,00 € (exkl. Lieferkosten).
+                    </p>
+                </div>
+                <button onclick="OnlyTestPage()" class="orderButton" id="order-now">
+                    Bestellen
+                </button>
+
+            </div>
+        </div>
+        <div class="mobile-button show-mobile-button d-none-mobile" id="mobileButton">
+            <button onclick="showMobileBasket()">WARENKORB</button>
+        </div>
+        <div class="footer">
+            <div class="footer-links">
+                <a href="">AGB</a>
+                <a href="">Datenschutzerklärung</a>
+                <a href="">Impressum</a>
+                <a href="https://logomakr.com/">Created my logo at LogoMakr.com</a>
+            </div>
+            <div class="copyright">
+                <p>&copy 2021 Lieferno</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

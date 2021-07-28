@@ -1,0 +1,440 @@
+html {
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+/* Header */
+
+.header {
+    background-color: #ff8000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.img-header {
+    margin: 8px;
+    width: 50px;
+    height: 50px;
+    padding: 16px;
+}
+
+.siteName {
+    display: flex;
+    align-items: center;
+}
+
+.website {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.adress {
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.translate {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: 4px solid white;
+    margin: 16px;
+}
+
+/* Shoppingbasket */
+
+.basket {
+    position: fixed;
+    width: 344px;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    padding-bottom: 12px;
+    overflow-y: auto;
+}
+
+.basket-scroll {
+    top: 0;
+}
+
+.basket-name {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 16px;
+}
+
+.basket-empty {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.meal-basket {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: rgba(0, 0, 0, 1);
+}
+
+.basket-amounts {
+    padding: 5px;
+}
+
+.basket-meal-name {
+    font-size: 15px;
+    width: 46%;
+}
+
+.basket-price {
+    margin-right: 15px;
+}
+
+.meal-basket-delete img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.meal-basket-change-amount {
+    display: flex;
+    margin: 0 auto;
+}
+
+.meal-basket-change-amount button {
+    color: black;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #b6b5b5;
+    margin-right: 10px;
+}
+
+.meal-basket-change-amount button:hover {
+    cursor: pointer;
+}
+
+.basket-empty-text {
+    margin-top: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.sum-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sum-without-delivery {
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.delivery-cost {
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.sum-all {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.min-order {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 16px;
+}
+
+.orderButton {
+    background-color: #d7d7d7;
+    color: #fff;
+    text-shadow: none;
+    cursor: not-allowed;
+    border-radius: 10px;
+    border: 4px solid #fff;
+    height: 72px;
+    width: 100%;
+    font-size: 25px;
+}
+
+/*Shopping Basket Mobile*/
+
+.basket-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 12px;
+    color: grey;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 12px;
+    overflow-y: auto;
+}
+
+.mobile-button {
+    display: none;
+}
+
+.mobileX {
+    display: none;
+}
+
+.show-mobile-button {
+    margin: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.show-mobile-button button {
+    background-color: #ff8000;
+    color: white;
+    width: 100%;
+    padding: 16px;
+    font-size: 24px;
+    border-style: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 7px solid white;
+    border-radius: 20px;
+}
+
+/*Complete Website */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 344px);
+}
+
+.menu-name-container {
+    padding-top: 53px;
+    width: calc(100% - 344px);
+}
+
+.d-none {
+    display: none;
+}
+
+/* Headline */
+
+.headimg {
+    width: calc(100% - 344px);
+    height: 250px;
+    object-fit: cover;
+}
+
+.logo {
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    background: #fff;
+    width: 200px;
+    height: 200px;
+    left: 35%;
+    position: absolute;
+    top: 240px;
+    object-fit: contain;
+    object-position: top;
+}
+
+.restaurant-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+.rating {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.opener {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.infoandlike {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.like {
+    border: 1px solid lightgray;
+}
+
+.info {
+    border: 1px solid lightgray;
+}
+
+/*Swipebar*/
+
+.swipe {
+    background-color: #e9e6e3be;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    overflow-x: auto;
+    justify-content: flex-start;
+}
+
+.swipe a {
+    text-decoration: none;
+    list-style: none;
+    min-width: 180px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    padding: 2px 19px 0;
+    color: #0a3847;
+}
+
+.swipe a:hover {
+    color: orange;
+    transition: all 225ms ease-in-out;
+}
+
+/*Menu Pictures and Menu Category*/
+
+.category {
+    background-color: #e9e6e3be;
+    font-weight: bold;
+    font-size: 20px;
+    color: #0a3847;
+    padding: 19px 50px;
+}
+
+.img-category {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    padding-top: 8px;
+}
+
+/*Menus*/
+
+.menus {
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 100%;
+    padding: 0;
+}
+
+.meals {
+    margin: 30px;
+}
+
+.meal-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0a3847;
+}
+
+.meal-description-info {
+    font-style: italic;
+    color: rgb(129, 129, 129);
+    margin-bottom: 25px;
+}
+
+#price {
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(243, 137, 7);
+}
+
+.add-to-basket {
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    font-size: 40px;
+    font-weight: 600;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+/*Back to Top*/
+
+.to-top {
+    bottom: 20px;
+    position: fixed;
+    right: 12px;
+    opacity: 0.5;
+    z-index: 99;
+}
+
+/*Footer*/
+
+.footer {
+    display: flex;
+    background-color: #0a3838;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-bottom: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.footer-links a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #ff8000;
+    transition: all 225ms ease-in-out;
+}
+
+.copyright {
+    padding: 8px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
